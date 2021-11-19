@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Card from "../card/index.jsx"
 
@@ -7,7 +7,7 @@ import axios from 'axios';
 
 import "./index.css";
 
-export default function Courses() {
+export default function Cursos() {
 
   const api = axios.create({
     baseURL: "https://api.github.com",
@@ -24,9 +24,9 @@ fetch('https://flashcard-api-mayck.herokuapp.com/api/colecoes')
     return (
         <div className="courses-container">
             {
-                courses.map(course => (
-                  <Link to={"/cadastro/editar/" + course.colecaoId}>
-                    <Card title={course.nome} description={course.descricao} />
+                courses.map(data => (
+                  <Link to={"/cadastro/editar/" + data.colecaoId}>
+                    <Card titulo={data.nome} descricao={data.descricao} />
                   </Link>
                 ))
             }

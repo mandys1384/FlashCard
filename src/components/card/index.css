@@ -1,11 +1,13 @@
 .card-container{
     display: flex;
     justify-content: center;
-    background-color: #4f4f4f;
-    width: 250px;
-    min-height: 300px;
+    background-color: rgb(247, 107, 107);
+    min-height: 350px;
+    width: 270px;
     margin-right: 50px;
 	margin-bottom: 50px;
+    border-radius: 8px;
+    font-weight:400;
 }
 
 .card-content {
@@ -15,10 +17,10 @@
 
 }
 
-.card-image {
+.image {
     background-color: white;
-    height: 150px;
-    width: 150px;
+    height: 110px;
+    width: 180px;
 	border-radius: 6px;
 }
 

@@ -68,7 +68,7 @@ export default function Cadastro() {
                     <input onChange={e => setData({...data, descricao: e.target.value})} id='description' value={data.descricao} type='text' name='description' />
                 </label>
                 <button>cadastrar</button>
-                <Link to="/courses" ><button onClick={handleDelete} >Deletar curso</button></Link>
+                <button onClick={handleDelete} >Deletar curso</button>
             </form>
         </div>
     )

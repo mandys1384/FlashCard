@@ -1,30 +1,16 @@
-import React, { useState, useEffect } from 'react';
-
-import axios from 'axios';
-
-import Senai from '../../assets/senai.png'
-
-import Logo from "../../assets/logoEricsson.png";
+import React from 'react';
 
 import './index.css'
 
 export default function Card(props) {
 
-  const [ courses, setCourses ] = useState([]);
-
-  useEffect(() => {
-    fetch('https://flashcard-api-mayck.herokuapp.com/api/colecoes')
-      .then(response => response.json())
-      .then(data => setCourses(data))
-  }, [])
-
   return (
       <div class='card-container' >
           <div class='card-content' >
-              <h3>{ props.title }</h3>
-              <div class='card-image' ></div>
+              <h1>{ props.titulo }</h1>
+              <div class='image' ></div>
               <footer>
-                  <p>{ props.description }</p>
+                  <p>{ props.descricao }</p>
               </footer>
           </div>
       </div>
